@@ -50,13 +50,13 @@ class SellingResource extends Resource
                 TextColumn::make('date'),
                 TextColumn::make('total_price')
                     ->sortable()
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 TextColumn::make('tax_price')
                     ->sortable()
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 TextColumn::make('total_cost')
                     ->sortable()
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
             ])
             ->searchPlaceholder('Search (Code, User, Customer Number')
             ->filters([
@@ -78,19 +78,19 @@ class SellingResource extends Resource
                         TextEntry::make('voucher'),
 
                         TextEntry::make('discount_price')
-                            ->money(Setting::get('currency', 'IDR')),
+                            ->money(Setting::get('currency', 'OMR')),
                         TextEntry::make('total_price')
-                            ->money(Setting::get('currency', 'IDR')),
+                            ->money(Setting::get('currency', 'OMR')),
                         TextEntry::make('total_cost')
-                            ->money(Setting::get('currency', 'IDR')),
+                            ->money(Setting::get('currency', 'OMR')),
                         TextEntry::make('tax_price')
-                            ->money(Setting::get('currency', 'IDR')),
+                            ->money(Setting::get('currency', 'OMR')),
                         TextEntry::make('tax')
-                            ->money(Setting::get('currency', 'IDR')),
+                            ->money(Setting::get('currency', 'OMR')),
                         TextEntry::make('payed_money')
-                            ->money(Setting::get('currency', 'IDR')),
+                            ->money(Setting::get('currency', 'OMR')),
                         TextEntry::make('money_changes')
-                            ->money(Setting::get('currency', 'IDR')),
+                            ->money(Setting::get('currency', 'OMR')),
                         TextEntry::make('user.name')
                             ->label('Cashier'),
                         TextEntry::make('member.name')

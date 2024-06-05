@@ -16,7 +16,7 @@ return new class extends Migration
                 $table->id();
                 $table->string('shop_name')->nullable();
                 $table->string('shop_location')->nullable();
-                $table->string('currency')->default('IDR');
+                $table->string('currency')->default('OMR');
                 $table->string('business_type')->nullable();
                 $table->string('photo')->nullable();
                 $table->timestamps();

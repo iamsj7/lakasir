@@ -58,9 +58,9 @@ class ViewDebt extends ViewRecord
             TextEntry::make('member.email')
                 ->label(__('Contact Member')),
             TextEntry::make('total_debt')
-                ->money(Setting::get('currency', 'IDR')),
+                ->money(Setting::get('currency', 'OMR')),
             TextEntry::make('rest_debt')
-                ->money(Setting::get('currency', 'IDR')),
+                ->money(Setting::get('currency', 'OMR')),
             TextEntry::make('due_date')
                 ->date(),
             TextEntry::make('total_billing_via_whatsapp'),

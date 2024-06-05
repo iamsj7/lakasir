@@ -48,8 +48,8 @@ class SellingReportService
                 $reports[] = [
                     'sku' => $detail->product->sku,
                     'name' => $detail->product->name,
-                    'selling_price' => format_money($detail->price, Setting::get('currency', 'IDR')),
-                    'initial_price' => format_money($detail->cost, Setting::get('currency', 'IDR')),
+                    'selling_price' => format_money($detail->price, Setting::get('currency', 'OMR')),
+                    'initial_price' => format_money($detail->cost, Setting::get('currency', 'OMR')),
                     'qty' => $detail->qty,
                 ];
             }
@@ -66,7 +66,7 @@ class SellingReportService
         $pdf->output();
         $domPdf = $pdf->getDomPDF();
         $canvas = $domPdf->get_canvas();
-        $canvas->page_text(720, 570, 'Halaman {PAGE_NUM} dari {PAGE_COUNT}', null, 10, [0, 0, 0]);
+        $canvas->page_text(720, 570, 'Page {PAGE_NUM} dari {PAGE_COUNT}', null, 10, [0, 0, 0]);
 
         return $pdf;
     }

@@ -18,9 +18,9 @@ class DebtItemsRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('product.name'),
                 Tables\Columns\TextColumn::make('amount'),
                 Tables\Columns\TextColumn::make('price')
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 Tables\Columns\TextColumn::make('subtotal')
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
             ])
             ->filters([
                 //

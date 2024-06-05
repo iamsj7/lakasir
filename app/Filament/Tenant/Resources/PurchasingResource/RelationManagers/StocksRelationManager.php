@@ -58,7 +58,7 @@ class StocksRelationManager extends RelationManager
                 })
                 ->live(onBlur: true),
             TextInput::make('initial_price')
-                ->prefix(Setting::get('currency', 'IDR'))
+                ->prefix(Setting::get('currency', 'OMR'))
                 ->mask(RawJs::make('$money($input)'))
                 ->lte('selling_price')
                 ->stripCharacters(',')
@@ -69,7 +69,7 @@ class StocksRelationManager extends RelationManager
                 })
                 ->live(onBlur: true),
             TextInput::make('selling_price')
-                ->prefix(Setting::get('currency', 'IDR'))
+                ->prefix(Setting::get('currency', 'OMR'))
                 ->mask(RawJs::make('$money($input)'))
                 ->gte('initial_price')
                 ->stripCharacters(',')
@@ -102,13 +102,13 @@ class StocksRelationManager extends RelationManager
                 TextColumn::make('init_stock')
                     ->label(__('Stock')),
                 TextColumn::make('initial_price')
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 TextColumn::make('selling_price')
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 TextColumn::make('total_initial_price')
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 TextColumn::make('total_selling_price')
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
             ])
             ->headerActions([
                 Tables\Actions\CreateAction::make()

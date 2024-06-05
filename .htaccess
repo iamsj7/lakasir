@@ -1,0 +1,37 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect all traffic to the public directory
+    RewriteRule ^(.*)$ /public/$1 [L]
+
+    # Ensure the Authorization header is passed
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Add security headers
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Deny access to .env and other hidden files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Deny access to git repository files
+<Files ~ "\.git">
+    Require all denied
+</Files>
+
+# Disable directory browsing
+Options -Indexes
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php82” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

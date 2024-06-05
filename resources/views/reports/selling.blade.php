@@ -58,7 +58,7 @@
 
 <body>
     <div>
-        <h1>Laporan kasir</h1>
+        <h1>Selling report</h1>
         <h3>{{ $header['shop_name'] }}</h3>
     </div>
     <p>Periode: <b>{{ $header['start_date'] }} - {{ $header['end_date'] }}</b></p>
@@ -66,11 +66,11 @@
         <thead>
             <th>SKU</th>
             <th>Nama Barang</th>
-            <th style="width: 100px;" class="number">Harga Jual</th>
-            <th>QTY Terjual</th>
-            <th style="width: 100px;" class="number">Rupiah Penjualan</th>
-            <th style="width: 100px;" class="number">Potongan Harga</th>
-            <th style="width: 100px;" class="number">Net Penjualan</th>
+            <th style="width: 100px;" class="number">Selling price</th>
+            <th>QTY Sold</th>
+            <th style="width: 100px;" class="number">Gross Sales</th>
+            <th style="width: 100px;" class="number">Discounts</th>
+            <th style="width: 100px;" class="number">Net Sales</th>
         </thead>
       @foreach($reports as $key => $report)
         <tbody>

@@ -47,13 +47,13 @@ class ProductResource extends Resource
                 TextColumn::make('unit'),
                 TextColumn::make('initial_price')
                     ->sortable()
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 TextColumn::make('selling_price')
                     ->sortable()
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 TextColumn::make('net_profit')
                     ->sortable()
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 TextColumn::make('type'),
                 ToggleColumn::make('is_non_stock')
                     ->label('Non Stock'),

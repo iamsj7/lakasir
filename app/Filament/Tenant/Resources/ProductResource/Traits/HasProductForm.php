@@ -72,7 +72,7 @@ trait HasProductForm
             ->gte('initial_price')
             ->stripCharacters(',')
             ->numeric()
-            ->prefix(Setting::get('currency', 'IDR'))
+            ->prefix(Setting::get('currency', 'OMR'))
             ->required();
     }
 
@@ -83,7 +83,7 @@ trait HasProductForm
             ->lte('selling_price')
             ->stripCharacters(',')
             ->numeric()
-            ->prefix(Setting::get('currency', 'IDR'))
+            ->prefix(Setting::get('currency', 'OMR'))
             ->required();
     }
 

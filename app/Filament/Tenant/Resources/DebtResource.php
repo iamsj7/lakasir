@@ -32,10 +32,10 @@ class DebtResource extends Resource
                     ->searchable()
                     ->label(__('Member Name')),
                 TextColumn::make('total_debt')
-                    ->money(Setting::get('currency', 'IDR'))
+                    ->money(Setting::get('currency', 'OMR'))
                     ->label(__('Total Debt')),
                 TextColumn::make('rest_debt')
-                    ->money(Setting::get('currency', 'IDR'))
+                    ->money(Setting::get('currency', 'OMR'))
                     ->label(__('Rest Debt')),
                 TextColumn::make('due_date')
                     ->label(__('Due Date'))

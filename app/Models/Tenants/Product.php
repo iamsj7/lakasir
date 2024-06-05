@@ -115,7 +115,7 @@ class Product extends Model
     {
         return Attribute::make(
             get: function ($value) {
-                return Number::currency($this->initial_price, Setting::get('currency', 'IDR'));
+                return Number::currency($this->initial_price, Setting::get('currency', 'OMR'));
             },
             set: fn ($value) => $value
         );

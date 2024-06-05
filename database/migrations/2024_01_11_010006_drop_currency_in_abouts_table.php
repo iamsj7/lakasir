@@ -23,7 +23,7 @@ return new class extends Migration
     {
         Schema::table('abouts', function (Blueprint $table) {
             $table->after('shop_location', function ($table) {
-                $table->string('currency')->default('IDR');
+                $table->string('currency')->default('OMR');
             });
         });
     }

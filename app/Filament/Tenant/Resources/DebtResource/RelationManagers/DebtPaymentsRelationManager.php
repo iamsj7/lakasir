@@ -47,10 +47,10 @@ class DebtPaymentsRelationManager extends RelationManager
             ->columns([
                 Tables\Columns\TextColumn::make('user.name'),
                 Tables\Columns\TextColumn::make('amount')
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 Tables\Columns\TextColumn::make('paymentMethod.name'),
                 Tables\Columns\TextColumn::make('last_debt')
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 Tables\Columns\TextColumn::make('date')
                     ->date(),
             ])

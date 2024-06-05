@@ -43,6 +43,6 @@ class CartItem extends Model
 
     public function getPriceFormatMOneyAttribute()
     {
-        return format_money($this->price, Setting::get('currency', 'IDR'));
+        return format_money($this->price, Setting::get('currency', 'OMR'));
     }
 }

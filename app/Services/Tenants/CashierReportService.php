@@ -76,7 +76,7 @@ class CashierReportService
         $pdf->output();
         $domPdf = $pdf->getDomPDF();
         $canvas = $domPdf->get_canvas();
-        $canvas->page_text(720, 570, 'Halaman {PAGE_NUM} dari {PAGE_COUNT}', null, 10, [0, 0, 0]);
+        $canvas->page_text(720, 570, 'Page {PAGE_NUM} dari {PAGE_COUNT}', null, 10, [0, 0, 0]);
 
         return $pdf;
     }

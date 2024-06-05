@@ -116,7 +116,7 @@ class PurchasingResource extends Resource
                             })
                             ->live(onBlur: true),
                         TextInput::make('initial_price')
-                            ->prefix(Setting::get('currency', 'IDR'))
+                            ->prefix(Setting::get('currency', 'OMR'))
                             ->mask(RawJs::make('$money($input)'))
                             ->lte('selling_price')
                             ->stripCharacters(',')
@@ -127,7 +127,7 @@ class PurchasingResource extends Resource
                             })
                             ->live(onBlur: true),
                         TextInput::make('selling_price')
-                            ->prefix(Setting::get('currency', 'IDR'))
+                            ->prefix(Setting::get('currency', 'OMR'))
                             ->mask(RawJs::make('$money($input)'))
                             ->gte('initial_price')
                             ->stripCharacters(',')
@@ -188,10 +188,10 @@ class PurchasingResource extends Resource
                 ->date()
                 ->label(__('Purchasing Date')),
             TextEntry::make('total_initial_price')
-                ->money(Setting::get('currency', 'IDR'))
+                ->money(Setting::get('currency', 'OMR'))
                 ->label(__('Total Initial Price')),
             TextEntry::make('total_selling_price')
-                ->money(Setting::get('currency', 'IDR'))
+                ->money(Setting::get('currency', 'OMR'))
                 ->label(__('Total Selling Price')),
             ImageEntry::make('image')
                 ->label(__('Attachment')),

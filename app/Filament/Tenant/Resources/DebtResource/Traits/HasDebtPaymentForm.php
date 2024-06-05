@@ -21,7 +21,7 @@ trait HasDebtPaymentForm
             TextInput::make('amount')
                 ->mask(RawJs::make('$money($input)'))
                 ->stripCharacters(',')
-                ->prefix(Setting::get('currency', 'IDR'))
+                ->prefix(Setting::get('currency', 'OMR'))
                 ->lte($debt->rest_debt, true)
                 ->required(),
             DatePicker::make('date')

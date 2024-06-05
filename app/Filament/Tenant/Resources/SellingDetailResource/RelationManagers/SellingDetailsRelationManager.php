@@ -35,10 +35,10 @@ class SellingDetailsRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('qty'),
                 Tables\Columns\TextColumn::make('price')
                     ->sortable()
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
                 Tables\Columns\TextColumn::make('cost')
                     ->sortable()
-                    ->money(Setting::get('currency', 'IDR')),
+                    ->money(Setting::get('currency', 'OMR')),
             ])
             ->paginated(false);
     }
